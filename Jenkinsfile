@@ -13,21 +13,21 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 echo 'Installing Python dependencies...'
-                bat 'pip install -r requirements.txt'
+                bat '"C:\\Program Files\\Python312\\python.exe" -m pip install -r requirements.txt'
             }
         }
 
         stage('Build') {
             steps {
                 echo 'Building Flask application...'
-                bat 'python -m py_compile app/app.py'
+                bat '"C:\\Program Files\\Python312\\python.exe" -m py_compile app/app.py'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running automated tests...'
-                bat 'pytest'
+                bat '"C:\\Program Files\\Python312\\python.exe" -m pytest'
             }
         }
 
