@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Management System</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Employee Management System</h1>
+
+    <a class="button" href="/add">
+        Add Employee
+    </a>
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Email</th>
+            <th>Salary</th>
+            <th>Action</th>
+        </tr>
+
+        {% for employee in employees %}
+
+        <tr>
+            <td>{{ employee["id"] }}</td>
+            <td>{{ employee["name"] }}</td>
+            <td>{{ employee["department"] }}</td>
+            <td>{{ employee["email"] }}</td>
+            <td>₹{{ employee["salary"] }}</td>
+
+            <td>
+                <a href="/delete/{{ employee['id'] }}">
+                    Delete
+                </a>
+            </td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+</body>
+</html>

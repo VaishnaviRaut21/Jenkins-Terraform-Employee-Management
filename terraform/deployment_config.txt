@@ -1,0 +1,9 @@
+Employee Management System
+==========================
+
+Application: Flask
+Database: SQLite
+CI/CD: Jenkins
+Infrastructure as Code: Terraform
+
+Deployment Status: Provisioned

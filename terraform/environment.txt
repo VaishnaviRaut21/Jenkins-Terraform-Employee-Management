@@ -1,0 +1,3 @@
+Environment: Development
+Application: Employee Management System
+Port: 5000
